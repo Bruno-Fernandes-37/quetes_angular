@@ -1,0 +1,59 @@
+<article>
+  <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+
+    <div>
+      <div class="form">
+        <label for="firstname">Prénom</label>
+        <input id="firstname" name="firstname" type="text" [(ngModel)]="signupForm.firstname" #firstname="ngModel"
+          required minlength="3" maxlength="15" />
+      </div>
+      <div *ngIf="myForm.submitted && firstname.errors">
+        <span *ngIf="firstname.errors?.['required']">Le prénom est requis!</span>
+        <span *ngIf="firstname.errors?.['minlength']">La longueur minimale doit être supérieure à 3!</span>
+        <span *ngIf="firstname.errors?.['maxlength']">La longueur maximale doit être inférieure à 15!</span>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="form">
+        <label for="lastname">Nom</label>
+        <input id="lastname" name="lastname" type="text" [(ngModel)]="signupForm.lastname" #lastname="ngModel" required
+          minlength="3" maxlength="15" />
+      </div>
+      <div *ngIf="myForm.submitted && lastname.errors">
+        <span *ngIf="lastname.errors?.['minlength']">La longueur minimale doit être supérieure à 3!</span>
+        <span *ngIf="lastname.errors?.['maxlength']">La longueur maximale doit être inférieure à 15!</span>
+        <span *ngIf="lastname.errors?.['required']">Le nom est requis!</span>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="form">
+        <label for="password">Mot de passe</label>
+        <input id="password" name="password" type="password" [(ngModel)]="signupForm.password" #password="ngModel"
+          required />
+      </div>
+      <div *ngIf="myForm.submitted && password.errors">
+        <span *ngIf="password.errors?.['required']">Le mot de passe est requis!</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="form">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" [(ngModel)]="signupForm.email" #email="ngModel" required email />
+      </div>
+      <div *ngIf="myForm.submitted && email.errors">
+        <span *ngIf="email.errors?.['required']">L'email est requis!</span>
+        <span *ngIf="email.errors?.['email']">L'adresse email doit être valide!</span>
+      </div>
+    </div>
+    <div>
+      <button type="submit">Enregistrer</button>
+      <button type="reset">Restaurer</button>
+    </div>
+
+  </form>
+</article>
