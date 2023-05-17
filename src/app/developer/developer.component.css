@@ -1,0 +1,15 @@
+article {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+section {
+    padding: 100px;
+}
+
+.skills {
+    display: flex;
+}

@@ -11,6 +11,9 @@ import { MenuComponent } from "./menu/menu.component";
 import { ROUTES } from "./app.routes";
 import { HomeComponent } from "./home/home.component";
 import { MyFormComponent } from "./myForm/my-form.component";
+import { DeveloperComponent } from './developer/developer.component';
+import { SkillComponent } from './skill/skill.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { MyFormComponent } from "./myForm/my-form.component";
     SignUpComponent,
     MenuComponent,
     HomeComponent,
-    MyFormComponent
+    MyFormComponent,
+    DeveloperComponent,
+    SkillComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
