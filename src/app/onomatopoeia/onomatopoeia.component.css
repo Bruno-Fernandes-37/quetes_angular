@@ -1,0 +1,14 @@
+article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    padding: 100px;
+}
+
+li {
+    margin: 20px;
+}

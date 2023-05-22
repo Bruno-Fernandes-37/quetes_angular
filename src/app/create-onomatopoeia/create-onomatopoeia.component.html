@@ -1,0 +1,22 @@
+<section>
+    <form #myForm="ngForm" (ngSubmit)="myForm.valid && createOnomatopoeia()">
+        <h3>Ajouter une anomatopée</h3>
+        <div class="form">
+            <label for="onomatopoeia">Onomatopée:</label>
+            <input id="onomatopoeia" name="onomatopoeia" type="text" [(ngModel)]="newOnomatopoeia"
+                #onomatopoeia="ngModel" required maxlength="15" minlength="2" />
+        </div>
+        <div *ngIf="myForm.submitted && (onomatopoeia.errors || error)">
+            <span *ngIf="onomatopoeia.errors?.['required']">Une onomatopée est requis!</span>
+            <span *ngIf="onomatopoeia.errors?.['minlength']">La longueur minimale doit être supérieure à 1!</span>
+            <span *ngIf="onomatopoeia.errors?.['maxlength']">La longueur maximale doit être inférieure à 15!</span>
+            <span *ngIf="error">Cette onomatopée existe déjà dans la lsite!</span>
+        </div>
+        <div>
+
+            <button type="submit">Enregistrer</button>
+            <button type="reset">Restaurer</button>
+        </div>
+        
+    </form>
+</section>

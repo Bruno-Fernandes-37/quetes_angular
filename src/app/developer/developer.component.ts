@@ -8,6 +8,6 @@ import { devTest } from '../models/mock-dev';
 })
 export class DeveloperComponent {
 
-  dev = devTest
+  dev = devTest;
 
 }

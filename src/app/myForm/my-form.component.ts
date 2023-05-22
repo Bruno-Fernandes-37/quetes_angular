@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { SingupForm } from "./signupForm";
+import { SingupForm } from "../models/SignupForm";
 
 @Component({
   selector: "app-my-form",

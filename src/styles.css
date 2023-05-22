@@ -7,3 +7,9 @@ h1 {
     width: 100%;
     text-align: center;
 }
+
+span{ 
+    color: red;
+    font-size: .8em;
+    margin-bottom: 10px;
+  }

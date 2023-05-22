@@ -13,6 +13,8 @@ import { HomeComponent } from "./home/home.component";
 import { MyFormComponent } from "./myForm/my-form.component";
 import { DeveloperComponent } from './developer/developer.component';
 import { SkillComponent } from './skill/skill.component';
+import { OnomatopoeiaComponent } from './onomatopoeia/onomatopoeia.component';
+import { CreateOnomatopoeiaComponent } from './create-onomatopoeia/create-onomatopoeia.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { SkillComponent } from './skill/skill.component';
     MyFormComponent,
     DeveloperComponent,
     SkillComponent,
+    OnomatopoeiaComponent,
+    CreateOnomatopoeiaComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
