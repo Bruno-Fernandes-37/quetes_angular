@@ -1,0 +1,13 @@
+img {
+    width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+h3 {
+    text-align: end;
+}
+
+.isEmptyText{
+    text-align: center;
+}

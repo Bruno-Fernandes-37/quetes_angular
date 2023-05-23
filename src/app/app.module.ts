@@ -15,6 +15,12 @@ import { DeveloperComponent } from './developer/developer.component';
 import { SkillComponent } from './skill/skill.component';
 import { OnomatopoeiaComponent } from './onomatopoeia/onomatopoeia.component';
 import { CreateOnomatopoeiaComponent } from './create-onomatopoeia/create-onomatopoeia.component';
+import { CreateKittenComponent } from './create-kitten/create-kitten.component';
+import { ListKittenComponent } from './list-kitten/list-kitten.component';
+import { UserKittenComponent } from './user-kitten/user-kitten.component';
+import { KittenStoryComponent } from './kitten-story/kitten-story.component';
+import { DatePipe } from "@angular/common";
+import { KittenDetailsComponent } from './kitten-details/kitten-details.component';
 
 
 @NgModule({
@@ -29,6 +35,11 @@ import { CreateOnomatopoeiaComponent } from './create-onomatopoeia/create-onomat
     SkillComponent,
     OnomatopoeiaComponent,
     CreateOnomatopoeiaComponent,
+    CreateKittenComponent,
+    ListKittenComponent,
+    UserKittenComponent,
+    KittenStoryComponent,
+    KittenDetailsComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],

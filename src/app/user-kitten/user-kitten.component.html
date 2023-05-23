@@ -1,0 +1,13 @@
+<article>
+    <h3>Vos Chats!</h3>
+    <div *ngFor="let kitten of kittensUser">
+        <div class="kitten">
+            <img src={{kitten?.picture}} alt="photo du chat">
+        </div>
+    </div>
+    <div *ngIf="!kittensUser || kittensUser?.length === 0">
+        <img src="https://static.vecteezy.com/ti/vecteur-libre/p1/10544212-chat-qui-pleure-vectoriel.jpg 1170w, https://static.vecteezy.com/ti/vecteur-libre/p2/10544212-chat-qui-pleure-vectoriel.jpg 2341w"
+            alt="chat qui pleur">
+        <p class="isEmptyText"><b>Adope vite un chat!</b></p>
+    </div>
+</article>

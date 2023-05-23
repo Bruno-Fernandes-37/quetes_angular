@@ -1,0 +1,9 @@
+<article>
+    <h3>Liste de nos chats, clique dessus pour d'adopter! </h3>
+    <div *ngIf="!kittensList || kittensList?.length === 0">
+        <img src="https://thumbs.dreamstime.com/b/chat-de-sauter-ou-de-vol-43809610.jpg"
+            alt="chat qui pleur">
+        <p class="isEmptyText"><b>Bravo tu les a tous adopter!</b></p>
+    </div>
+    <app-kitten-details *ngFor="let kitten of kittensList" [kitten]="kitten" (sendKittenToParentForUser)="adoptKitten($event)" ></app-kitten-details>
+</article>

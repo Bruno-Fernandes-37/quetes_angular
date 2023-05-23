@@ -1,0 +1,40 @@
+section{
+
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 286px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+button {
+    width: 150px;
+    margin: 5px;
+    padding: 8px;
+}
+div {
+    margin: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+.form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,0 +1,8 @@
+<h1>Les Chats</h1>
+
+    <div>
+    <app-list-kitten [kittensList]="kittensList" (sendKittenToParentForUser)="adoptKitten($event)"></app-list-kitten>
+    <app-user-kitten [kittensUser]="kittensUser"></app-user-kitten>
+</div>
+<app-create-kitten (sendKittenToParent)="onReceiveNewKitten($event)"></app-create-kitten>
+

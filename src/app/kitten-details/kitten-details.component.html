@@ -1,0 +1,12 @@
+<section>
+    <div class="kitten">
+        <a href="#" (mouseenter)="showImformation()" (mouseleave)="showImformation()" (click)="giveMeKitten($event)">
+            <img src={{kitten?.picture}} alt="photo du chat">
+        </a>
+    </div>
+    <div *ngIf="modal">
+        <p><b>Nom:</b> {{kitten?.name}}</p>
+        <p><b>Née le:</b> {{kitten?.birthday | date: 'dd/MM/yyyy'}}</p>
+        <p><b>Espece:</b> {{kitten?.race}}</p>
+    </div>
+</section>

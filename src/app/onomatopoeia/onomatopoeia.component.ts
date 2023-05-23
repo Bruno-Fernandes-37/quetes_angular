@@ -13,6 +13,5 @@ export class OnomatopoeiaComponent {
 
   onReceiveNewOnomatopoeia(newOnomatopoeia: string):void {
       this.onomatopoeiaList.push(newOnomatopoeia);
-
   }
 }

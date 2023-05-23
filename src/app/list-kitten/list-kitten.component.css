@@ -1,0 +1,9 @@
+article{
+    min-width: 560px;
+}
+
+img {
+    width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+}

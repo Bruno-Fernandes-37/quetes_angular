@@ -1,0 +1,56 @@
+<section>
+    <form #myForm="ngForm" (ngSubmit)="myForm.valid && createKitten()">
+        <h3>Ajouter un chat:</h3>
+
+        <div class="form">
+            <label for="name">Nom du chat:</label>
+            <input id="name" name="name" type="text" [(ngModel)]="newKitten.name" #name="ngModel" required
+                maxlength="15" minlength="3" />
+        </div>
+        <div *ngIf="myForm.submitted && name.errors">
+            <span *ngIf="name.errors?.['required']">Une onomatopée est requis!</span>
+            <span *ngIf="name.errors?.['minlength']">La longueur minimale doit être supérieure à 1!</span>
+            <span *ngIf="name.errors?.['maxlength']">La longueur maximale doit être inférieure à 15!</span>
+        </div>
+
+        <div class="form">
+            <label for="race">Espéce du chat:</label>
+            <input id="race" name="race" type="text" [(ngModel)]="newKitten.race" #race="ngModel" required
+                maxlength="15" minlength="3" />
+        </div>
+        <div *ngIf="myForm.submitted && race.errors">
+            <span *ngIf="race.errors?.['required']">Une onomatopée est requis!</span>
+            <span *ngIf="race.errors?.['minlength']">La longueur minimale doit être supérieure à 1!</span>
+            <span *ngIf="race.errors?.['maxlength']">La longueur maximale doit être inférieure à 15!</span>
+        </div>
+
+        <div class="form">
+            <label for="birthday">Date de naissance:</label>
+            <input id="birthday" name="birthday" type="date" [(ngModel)]="newKitten.birthday" #birthday="ngModel"
+                required maxlength="15" minlength="3" />
+        </div>
+        <div *ngIf="myForm.submitted && birthday.errors">
+            <span *ngIf="birthday.errors?.['required']">Une onomatopée est requis!</span>
+            <span *ngIf="birthday.errors?.['date']">Ce doit etre une date valide!</span>
+        </div>
+
+        <div class="form">
+            <label for="picture">Lien vers la photo du chat:</label>
+            <input id="picture" name="picture" type="text" [(ngModel)]="newKitten.picture" #picture="ngModel" required
+                minlength="7" />
+        </div>
+        <div *ngIf="myForm.submitted && picture.errors">
+            <span *ngIf="picture.errors?.['required']">Une onomatopée est requis!</span>
+            <span *ngIf="picture.errors?.['minlength']">La longueur minimale doit être supérieure à 1!</span>
+            <span *ngIf="picture.errors?.['maxlength']">La longueur maximale doit être inférieure à 15!</span>
+        </div>
+
+        <div>
+            <div *ngIf="!picture.errors && !birthday.errors && !race.errors && !name.errors ; then isOk else isNotOk"></div>
+            <ng-template #isOk><button class="buttonValide" type="submit">Enregistrer</button></ng-template>
+            <ng-template #isNotOk><button type="submit" disabled="disabled">Non valide</button></ng-template>
+            <button type="reset">Restaurer</button>
+        </div>
+
+    </form>
+</section>

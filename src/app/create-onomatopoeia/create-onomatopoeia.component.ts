@@ -13,7 +13,7 @@ export class CreateOnomatopoeiaComponent {
 
   @Input() onomatopoeiaList?: string[]
 
-  @Output() sendOnomatopoeiaToParent: EventEmitter<string> = new EventEmitter()
+  @Output() sendOnomatopoeiaToParent: EventEmitter<string> = new EventEmitter();
 
   createOnomatopoeia(): void {
     const newOnomatopoeia = this.newOnomatopoeia.toLowerCase()
