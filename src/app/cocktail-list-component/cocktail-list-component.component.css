@@ -1,0 +1,14 @@
+img{
+    width: 300px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.titleCocktail{
+    display: flex;
+    justify-content: space-between;
+}

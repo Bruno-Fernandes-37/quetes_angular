@@ -19,8 +19,8 @@ import { CreateKittenComponent } from './create-kitten/create-kitten.component';
 import { ListKittenComponent } from './list-kitten/list-kitten.component';
 import { UserKittenComponent } from './user-kitten/user-kitten.component';
 import { KittenStoryComponent } from './kitten-story/kitten-story.component';
-import { DatePipe } from "@angular/common";
 import { KittenDetailsComponent } from './kitten-details/kitten-details.component';
+import { CocktailListComponent } from './cocktail-list-component/cocktail-list-component.component';
 
 
 @NgModule({
@@ -40,6 +40,7 @@ import { KittenDetailsComponent } from './kitten-details/kitten-details.componen
     UserKittenComponent,
     KittenStoryComponent,
     KittenDetailsComponent,
+    CocktailListComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],

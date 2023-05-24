@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Kitten } from '../models/Kitten';
-import { kittensTest } from '../models/mock-kittens';
+import { kittensTest } from '../models/mocks/mock-kittens';
 
 @Component({
   selector: 'app-kitten-story',

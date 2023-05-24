@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { devTest } from '../models/mock-dev';
+import { devTest } from '../models/mocks/mock-dev';
 
 @Component({
   selector: 'app-developer',

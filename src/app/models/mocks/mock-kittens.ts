@@ -1,4 +1,4 @@
-import { Kitten } from "./Kitten";
+import { Kitten } from "../Kitten";
 
 
 export const kittensTest: Kitten[] = [

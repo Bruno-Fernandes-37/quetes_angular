@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from "../User";
 
 export const userTest: User = new User(
   "Fernandes",

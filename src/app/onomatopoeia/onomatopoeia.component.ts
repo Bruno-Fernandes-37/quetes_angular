@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { onomatopoeiaTest } from '../models/mock-onomatopoeia';
+import { onomatopoeiaTest } from '../models/mocks/mock-onomatopoeia';
 
 
 @Component({
