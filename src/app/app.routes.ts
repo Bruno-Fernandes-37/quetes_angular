@@ -1,11 +1,13 @@
 import { Routes } from "@angular/router";
-import { UserProfileComponent } from "./user/user-profile.component";
-import { SignUpComponent } from "./signup/signup.component";
-import { HomeComponent } from "./home/home.component";
-import { DeveloperComponent } from "./developer/developer.component";
-import { OnomatopoeiaComponent } from "./onomatopoeia/onomatopoeia.component";
-import { KittenStoryComponent } from "./kitten-story/kitten-story.component";
-import { CocktailListComponent } from "./cocktail-list/cocktail-list.component";
+
+import { UserProfileComponent } from "./pages/user/user-profile.component";
+import { SignUpComponent } from "./pages/signup/signup.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { DeveloperComponent } from "./pages/developer/developer.component";
+import { OnomatopoeiaComponent } from "./pages/onomatopoeia/onomatopoeia.component";
+import { KittenStoryComponent } from "./pages/kitten-story/kitten-story.component";
+import { NasaComponent } from "./pages/nasa/nasa.component";
+import { CocktailListComponent } from "./pages/cocktail-list/cocktail-list.component";
 
 const ROUTES: Routes = [
   { path: "", component: HomeComponent },
@@ -14,7 +16,8 @@ const ROUTES: Routes = [
   { path: "dev", component: DeveloperComponent },
   { path: "onomatopoeia", component: OnomatopoeiaComponent },
   { path: "kitten", component: KittenStoryComponent },
-  { path: "cocktail", component: CocktailListComponent},
+  { path: "cocktail", component: CocktailListComponent },
+  { path: "nasa", component: NasaComponent },
 ];
 
 export { ROUTES };

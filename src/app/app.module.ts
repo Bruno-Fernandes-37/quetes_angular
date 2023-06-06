@@ -4,23 +4,26 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./app.component";
-
-import { UserProfileComponent } from "./user/user-profile.component";
-import { SignUpComponent } from "./signup/signup.component";
-import { MenuComponent } from "./menu/menu.component";
 import { ROUTES } from "./app.routes";
-import { HomeComponent } from "./home/home.component";
-import { MyFormComponent } from "./myForm/my-form.component";
-import { DeveloperComponent } from './developer/developer.component';
-import { SkillComponent } from './skill/skill.component';
-import { OnomatopoeiaComponent } from './onomatopoeia/onomatopoeia.component';
-import { CreateOnomatopoeiaComponent } from './create-onomatopoeia/create-onomatopoeia.component';
-import { CreateKittenComponent } from './create-kitten/create-kitten.component';
-import { ListKittenComponent } from './list-kitten/list-kitten.component';
-import { UserKittenComponent } from './user-kitten/user-kitten.component';
-import { KittenStoryComponent } from './kitten-story/kitten-story.component';
-import { KittenDetailsComponent } from './kitten-details/kitten-details.component';
-import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+
+import { UserProfileComponent } from "./pages/user/user-profile.component";
+import { SignUpComponent } from "./pages/signup/signup.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { DeveloperComponent } from './pages/developer/developer.component';
+import { OnomatopoeiaComponent } from './pages/onomatopoeia/onomatopoeia.component';
+import { KittenStoryComponent } from './pages/kitten-story/kitten-story.component';
+import { CocktailListComponent } from './pages/cocktail-list/cocktail-list.component';
+import { NasaComponent } from './pages/nasa/nasa.component';
+
+import { MenuComponent } from "./components/menu/menu.component";
+import { SkillComponent } from './components/skill/skill.component';
+import { MyFormComponent } from "./components/myForm/my-form.component";
+import { CreateOnomatopoeiaComponent } from './components/create-onomatopoeia/create-onomatopoeia.component';
+import { CreateKittenComponent } from './components/create-kitten/create-kitten.component';
+import { ListKittenComponent } from './components/list-kitten/list-kitten.component';
+import { UserKittenComponent } from './components/user-kitten/user-kitten.component';
+import { KittenDetailsComponent } from './components/kitten-details/kitten-details.component';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -41,9 +44,15 @@ import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
     KittenStoryComponent,
     KittenDetailsComponent,
     CocktailListComponent,
+    NasaComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(ROUTES),
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
