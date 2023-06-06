@@ -20,7 +20,7 @@ import { ListKittenComponent } from './list-kitten/list-kitten.component';
 import { UserKittenComponent } from './user-kitten/user-kitten.component';
 import { KittenStoryComponent } from './kitten-story/kitten-story.component';
 import { KittenDetailsComponent } from './kitten-details/kitten-details.component';
-import { CocktailListComponent } from './cocktail-list-component/cocktail-list-component.component';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 
 
 @NgModule({

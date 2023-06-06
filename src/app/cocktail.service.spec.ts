@@ -1,9 +1,6 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
-import { CocktailListComponent } from './cocktail-list-component/cocktail-list-component.component';
-import { CocktailService } from './cocktail-service.service';
-
-
-
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+import { CocktailService } from './cocktail.service';
 
 describe('Quest Test Suite', () => {
   beforeEach(waitForAsync(() => {
@@ -23,6 +20,7 @@ describe('Quest Test Suite', () => {
     const service: CocktailService = TestBed.inject(CocktailService);
     const tab = service.getCocktails();
     expect(tab.length).toBeGreaterThan(0);
+
   });
 
   fit('should create a CocktailListComponent instance', waitForAsync(() => {
@@ -50,7 +48,7 @@ describe('Quest Test Suite', () => {
         fixture.detectChanges();
         const compiled = fixture.debugElement.nativeElement;
         const content = compiled.textContent;
-        const first = fixture.componentInstance.cocktails[0];
+        const first = fixture.componentInstance.cocktails![0];
         expect(content).toContain(first.name);
       }
     )

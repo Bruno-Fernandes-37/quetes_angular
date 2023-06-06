@@ -5,7 +5,7 @@ import { HomeComponent } from "./home/home.component";
 import { DeveloperComponent } from "./developer/developer.component";
 import { OnomatopoeiaComponent } from "./onomatopoeia/onomatopoeia.component";
 import { KittenStoryComponent } from "./kitten-story/kitten-story.component";
-import { CocktailListComponent } from "./cocktail-list-component/cocktail-list-component.component";
+import { CocktailListComponent } from "./cocktail-list/cocktail-list.component";
 
 const ROUTES: Routes = [
   { path: "", component: HomeComponent },

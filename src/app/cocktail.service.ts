@@ -7,12 +7,12 @@ import { cocktailListTest } from './models/mocks/mock-cocktail';
 })
 export class CocktailService {
 
-  private cocktailList: Cocktail[] = cocktailListTest;
+  private cocktails: Cocktail[] = cocktailListTest;
 
   constructor() { }
 
   
   getCocktails(): Cocktail[] {
-    return this.cocktailList;
+    return this.cocktails;
   }
 }
