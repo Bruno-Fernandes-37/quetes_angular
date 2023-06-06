@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Old Fashioned",
+        "price": 11,
+        "picture": "https://boiremixologie.com/files/medias/_imageCarrousel/Old-fashioned.jpg"
+    },
+    {
+        "name": "Cuba Libre",
+        "price": 11,
+        "picture": "https://boiremixologie.com/files/medias/_imageCarrousel/sirop_tonic_cola.jpg"
+    },
+    {
+        "name": "Sidecar",
+        "price": 11,
+        "picture": "https://boiremixologie.com/files/medias/_imageCarrousel/cocktail-sidecar.jpg"
+    },
+    {
+        "name": "Mojito",
+        "price": 11,
+        "picture": "https://boiremixologie.com/files/medias/_imageCarrousel/mojito.jpg"
+    }
+]

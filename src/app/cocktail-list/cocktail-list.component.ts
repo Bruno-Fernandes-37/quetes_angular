@@ -10,14 +10,12 @@ import { Cocktail } from '../models/Cocktail';
 export class CocktailListComponent {
   cocktails?: Cocktail[];
 
-  constructor(public cocktailService: CocktailService) {
-    
-  }
+  constructor(public cocktailService: CocktailService) { }
 
   ngOnInit(): void {
-    this.cocktails = this.cocktailService.getCocktails();
+    this.cocktailService.getCocktails().subscribe(cocktailsFromJsonFile => {
+      this.cocktails = cocktailsFromJsonFile;
+    });
   }
 
-
- 
 }
