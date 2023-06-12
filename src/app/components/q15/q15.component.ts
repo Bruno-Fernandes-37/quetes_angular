@@ -19,7 +19,6 @@ export class Q15Component {
   constructor(private formBuilder: FormBuilder) { }
 
   onSubmit() {
-    console.log(this.userForm.get('credentials')?.get('email')?.value);
-    console.log(this.userForm.get('credentials')?.get('password')?.value);
+    console.log(this.userForm.value);
   }
 }
