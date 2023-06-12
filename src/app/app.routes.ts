@@ -8,6 +8,7 @@ import { OnomatopoeiaComponent } from "./pages/onomatopoeia/onomatopoeia.compone
 import { KittenStoryComponent } from "./pages/kitten-story/kitten-story.component";
 import { NasaComponent } from "./pages/nasa/nasa.component";
 import { CocktailListComponent } from "./pages/cocktail-list/cocktail-list.component";
+import { ReactiveFormComponent } from "./pages/reactive-form/reactive-form.component";
 
 const ROUTES: Routes = [
   { path: "", component: HomeComponent },
@@ -18,6 +19,7 @@ const ROUTES: Routes = [
   { path: "kitten", component: KittenStoryComponent },
   { path: "cocktail", component: CocktailListComponent },
   { path: "nasa", component: NasaComponent },
+  { path: "form", component: ReactiveFormComponent },
 ];
 
 export { ROUTES };

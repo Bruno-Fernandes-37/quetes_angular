@@ -1,0 +1,50 @@
+<section>
+    <div class="section">
+        <div>
+            <h3>Info de connexion</h3>
+            <label>
+                Nom d'utilisateur:
+                <input type="text" [formControl]="username">
+            </label>
+            <label>
+                Email:
+                <input type="email" [formControl]="email">
+            </label>
+            <label>
+                Mot de passe
+                <input type="password" [formControl]="password">
+            </label>
+        </div>
+        <div>
+            <h3>Adresse</h3>
+            <label>
+                Numero de la rue:
+                <input type="text" [formControl]="streetNumber">
+            </label>
+            <label>
+                Nom de la rue:
+                <input type="text" [formControl]="streetName">
+            </label>
+            <label>
+                Code postal:
+                <input type="text" [formControl]="postcode">
+            </label>
+            <label>
+                Ville:
+                <input type="text" [formControl]="city">
+            </label>
+        </div>
+    </div>
+    <button (click)="inscription()">Inscription</button>
+
+    <div *ngIf="user">
+        <p>{{user.username}}</p>
+        <p>{{user.email}}</p>
+        <p>**********</p>
+        <p>{{user.streetNumber}}</p>
+        <p>{{user.streetName}}</p>
+        <p>{{user.postcode}}</p>
+        <p>{{user.city}}</p>
+    </div>
+</section>
+

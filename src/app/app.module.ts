@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./app.component";
@@ -24,6 +24,10 @@ import { ListKittenComponent } from './components/list-kitten/list-kitten.compon
 import { UserKittenComponent } from './components/user-kitten/user-kitten.component';
 import { KittenDetailsComponent } from './components/kitten-details/kitten-details.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
+import { UserComponent } from './components/user/user.component';
+import { Q14Component } from './components/q14/q14.component';
+import { Q15Component } from './components/q15/q15.component';
 
 
 @NgModule({
@@ -45,11 +49,16 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
     KittenDetailsComponent,
     CocktailListComponent,
     NasaComponent,
+    ReactiveFormComponent,
+    UserComponent,
+    Q14Component,
+    Q15Component,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
   ],
   providers: [],

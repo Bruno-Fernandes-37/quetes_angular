@@ -2,7 +2,7 @@ img{
     width: 300px;
 }
 
-.container{
+article{
     width: 100%;
     display: flex;
     justify-content: space-around;
