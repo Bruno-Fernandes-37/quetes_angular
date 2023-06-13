@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { emailValidator } from './email-validator';
 
 @Component({
   selector: 'app-q15',
@@ -11,8 +11,8 @@ export class Q15Component {
 
   userForm = this.formBuilder.group({
     credentials: this.formBuilder.group({
-      email: [''],
-      password: [''],
+      email: ['', [Validators.required, emailValidator]],
+      password: ['', Validators.required],
     })
   })
 

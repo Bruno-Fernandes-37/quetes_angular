@@ -1,4 +1,4 @@
-<h2>Reactives Form quête 15</h2>
+<h2>Reactives Form quête 15 - 16</h2>
 
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <fieldset formGroupName="credentials">
@@ -6,6 +6,12 @@
             <label>
                 Email:
                 <input type="email" formControlName="email">
+                <div *ngIf="userForm.get('credentials.email')?.errors && !userForm.get('credentials.email')?.pristine"
+                    class="error-msg">
+                    <p [hidden]="!userForm.get('credentials.email')?.errors?.['required']">email is required.</p>
+                    <p [hidden]="!userForm.get('credentials.email')?.invalid">email is invalid</p>
+
+                </div>
             </label>
         </div>
 
@@ -13,6 +19,11 @@
             <label>
                 Mot de passe:
                 <input type="password" formControlName="password">
+                <div *ngIf="userForm.get('credentials.password')?.errors && !userForm.get('credentials.password')?.pristine"
+                    class="error-msg">
+                    <p [hidden]="!userForm.get('credentials.password')?.errors?.['required']">password is required.
+                    </p>
+                </div>
             </label>
         </div>
     </fieldset>
